@@ -1,0 +1,56 @@
+#include <iostream>
+#include<vector>
+using namespace std;
+
+int main() {
+  
+  vector<int> v;   // creating and initializing a vector.
+
+  vector<int> a(5,1);   // initializing methods
+
+  vector<int> last(a);
+  
+   cout<<"print last"<<endl;
+  for(int i:last) {
+    cout<<i<<" ";
+  }cout<<endl;
+
+  cout<<"Capacity-> "<<v.capacity()<<endl;   // to know the capacity of the vector.
+
+  v.push_back(1);   // pushing a element in vector
+  
+  cout<<"Capacity-> "<<v.capacity()<<endl;
+
+  v.push_back(2);
+  cout<<"Capacity-> "<<v.capacity()<<endl;
+
+  v.push_back(3);
+  cout<<"Capacity-> "<<v.capacity()<<endl;
+  cout<<"Size-> "<<v.size()<<endl;
+
+  cout<<"Elemetn at 2nd Index" <<v.at(2)<<endl;    // finding a element at agiven index.
+
+  cout<<"front " <<v.front()<<endl;     // to know the first element in vector.
+  cout<<"back " <<v.back()<<endl;      // to know the last element in vector.
+
+ cout<<"before pop"<<endl;
+  for(int i:v) {
+    cout<<i<<" ";
+  }cout<<endl;
+
+  v.pop_back();      // to remove element from vector.
+
+  cout<<"after pop"<<endl;
+  for(int i:v) {
+    cout<<i<<" ";
+  }
+
+  cout<<"before clear size "<<v.size()<<endl;     // to know thw size.
+  
+  v.clear();      // to clear the vector.
+  
+  cout<<"after clear size "<<v.size()<<endl;
+
+
+
+}
